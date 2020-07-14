@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    tools:context="com.axxessassignmentapp.application.activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_searchbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_box_bg"
+        android:elevation="5dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/rl_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:fontFamily="@font/montserrat"
+            android:hint="Ex. Cat"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_search" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_searchbox"
+       >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+        <RelativeLayout
+            android:id="@+id/rl_actions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <!--region progress bar-->
+            <LinearLayout
+                android:id="@+id/lyt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/spacing_medium"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_progress_auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:text="Please Wait..."
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_auth"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="130dp"
+                    android:layout_height="20dp"
+                    android:indeterminate="true" />
+
+            </LinearLayout>
+            <!--endregion-->
+
+            <!--region No_internet_layout-->
+            <LinearLayout
+                android:id="@+id/no_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/ic_no_internet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="No connection"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="@dimen/spacing_large"
+                        android:layout_marginEnd="@dimen/spacing_medium"
+                        android:layout_marginRight="@dimen/spacing_medium"
+                        android:tint="@color/grey_90"
+                        app:srcCompat="@drawable/ic_refresh" />
+
+                    <TextView
+                        android:id="@+id/tv_retry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tap to retry"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--endregion-->
+
+            <!--region No_Item_Layout-->
+            <LinearLayout
+                android:id="@+id/no_item_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="80dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/img_no_feed" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:text="Request not found"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="Stay tune we will notify when updating Request"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/grey_40" />
+            </LinearLayout>
+            <!--endregion-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

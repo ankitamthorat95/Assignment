@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b9243c</color>
+    <color name="colorPrimaryDark">#AC132C</color>
+    <color name="colorAccent">#333333</color>
+
+    <color name="colorbackground">#efefef</color>
+    //DE-PARENT APP
+    <color name="background">#dddddd</color>
+    <color name="backgroundBlack">#232E32</color>
+    <color name="colorTextWhite">#fffefe</color>
+    <color name="colorTextBlack">#232E32</color>
+    <color name="icon_foreground">#FFFFFF</color>
+    <color name="foregroundBlack">#8F232E32</color>>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <color name="color_blue">#4436AA</color>
+    <color name="color_green">#1DA965</color>
+    <color name="color_red">#cf3a24</color>
+
+    <color name="cinnabar">#e2474b</color>
+
+    <color name="HintColor">#b6b5b5</color>
+    <color name="colorText">#575b60</color>
+
+    <color name="login_background">#E5E5E5</color>
+    <color name="login_button_background">#5D5D5D</color>
+    <color name="submit_button_background">#0084EA</color>
+    <color name="colorBlack">#123</color>
+    <color name="colorView">#c2c3c3</color>
+
+</resources>

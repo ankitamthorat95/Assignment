@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="actionBarSize">56dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">200dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="viewpager_margin_overlap">-60dp</dimen>
+    <dimen name="viewpager_margin_overlap_payment">-30dp</dimen>
+
+
+    <dimen name="design_fab_image_size" tools:override="true">36dp</dimen>
+
+
+    <dimen name="toolbarText">16sp</dimen>
+    <dimen name="padding_10" tools:override="true">10dp</dimen>
+    <dimen name="padding_20" tools:override="true">20dp</dimen>
+
+
+    <!--genaral spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <!--<dimen name="spacing_xmlarge">40dp</dimen>-->
+    <!--<dimen name="spacing_xxlarge">50dp</dimen>-->
+    <!--<dimen name="spacing_xxxlarge">55dp</dimen>-->
+    <!--<dimen name="appbar_padding_top">8dp</dimen>-->
+
+    <!--Font Sizes-->
+    <dimen name="fontStyle1">20dp</dimen>
+    <dimen name="fontStyle2">18dp</dimen>
+    <dimen name="fontStyle3">16dp</dimen>
+    <dimen name="fontStyle4">14dp</dimen>
+    <dimen name="fontStyle5">12dp</dimen>
+    <dimen name="fontStyle6">10dp</dimen>
+    <dimen name="fontStyle7">8dp</dimen>
+
+    <dimen name="menu_size">18dp</dimen>
+    <dimen name="nav_drawer_text">14sp</dimen>
+
+
+
+    <dimen name="StyleDashBOardText" tools:ignore="MissingDefaultResource">16dp</dimen>
+    <dimen name="receiptTextSize">16sp</dimen>
+    <dimen name="textMediumSize">14sp</dimen>
+    <dimen name="textSizeForm">15sp</dimen>
+    <dimen name="txtquiz">12sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="mediumTextSize">14sp</dimen>
+    <dimen name="tabTextSubSize">14sp</dimen>
+
+</resources>
