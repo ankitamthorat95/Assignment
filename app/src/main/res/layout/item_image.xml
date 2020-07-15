@@ -16,6 +16,6 @@
         android:id="@+id/pb_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
