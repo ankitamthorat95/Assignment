@@ -72,7 +72,8 @@ class ImageDetailsActivity2 : AppCompatActivity(), View.OnClickListener {
                     .load(imageitem!!.link)
                     .thumbnail(0.5f)
                     .override(200, 200)
-                    .error(R.drawable.ic_photo)
+                    .error(R.drawable.img_no_feed)
+                    .placeholder(R.drawable.img_no_feed)
                     .listener(object : RequestListener<Drawable?> {
                         override fun onLoadFailed(e: GlideException?, model: Any, target: Target<Drawable?>, isFirstResource: Boolean): Boolean {
                             pb_image.setVisibility(View.GONE)
@@ -94,13 +95,22 @@ class ImageDetailsActivity2 : AppCompatActivity(), View.OnClickListener {
 
     private fun BindList() {
         imageArrayList = commentsDatabaseHelper!!.GetComments(imageitem!!.id)
+
         rv_comments!!.layoutManager = LinearLayoutManager(activity)
         rv_comments!!.itemAnimator = DefaultItemAnimator()
         rv_comments!!.setHasFixedSize(true)
         adapter = CommentRecyclerAdapter(activity, imageArrayList,
-                CommentRecyclerAdapter.ItemClickListener { view, position -> })
+                CommentRecyclerAdapter.ItemClickListener { view, position ->
+                    val model = (imageArrayList as ArrayList<CommentModel>?)!!.get(position)
+                    if (commentsDatabaseHelper!!.delete(model.id))  {
+                        Utility.showSuccessMessage(activity, "Comment Deleted .")
+                        (imageArrayList as ArrayList<CommentModel>?)!!.removeAt(position)
+                        adapter!!.notifyItemRemoved(position)
+                    }
+                })
         rv_comments!!.adapter = adapter
         adapter!!.notifyDataSetChanged()
+
     }
 
 

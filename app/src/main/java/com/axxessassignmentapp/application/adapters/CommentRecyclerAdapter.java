@@ -59,12 +59,14 @@ public class CommentRecyclerAdapter extends RecyclerView.Adapter<CommentRecycler
 
     public class MemberListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tv_comment;
+        ImageView iv_delete;
 
         public MemberListViewHolder(View itemView) {
             super(itemView);
             tv_comment = itemView.findViewById(R.id.tv_comment);
-            itemView.setClickable(true);
-            itemView.setOnClickListener(this);
+            iv_delete = itemView.findViewById(R.id.iv_delete);
+            iv_delete.setClickable(true);
+            iv_delete.setOnClickListener(this);
         }
 
         @Override

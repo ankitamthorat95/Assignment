@@ -190,9 +190,9 @@ public class CommentsDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void delete(String id) {
+    public Boolean delete(int id) {
         SQLiteDatabase database = this.getWritableDatabase();
-        database.delete(TABLE_COMMENTS,COL_1 + " = ?",new String[] { id });
+       return database.delete(TABLE_COMMENTS,COL_1 + " = ?",new String[] {String.valueOf(id)}) > 0;
     }
 
 }

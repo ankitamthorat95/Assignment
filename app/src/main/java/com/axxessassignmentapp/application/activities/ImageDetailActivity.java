@@ -128,6 +128,12 @@ public class ImageDetailActivity extends AppCompatActivity implements View.OnCli
                     @Override
                     public void onClick(View view, int position) {
 
+                        CommentModel model =  imageArrayList.get(position);
+                        if(commentsDatabaseHelper.delete(model.getId())){
+                            Utility.showSuccessMessage(activity, "Comment Deleted .");
+                            imageArrayList.remove(position);
+                            adapter.notifyItemRemoved(position);
+                        }
                     }
                 });
         rv_comments.setAdapter(adapter);
