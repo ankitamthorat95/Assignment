@@ -84,14 +84,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
                 })
                 .into( holder.iv_image );
 
-     /*   Glide.with( holder.itemView.getContext() )
-                .load( item.getLink() )
-                .thumbnail( 0.5f )
-                .override( 60, 60 )
-                .placeholder(R.drawable.img_no_feed)
-                .diskCacheStrategy( DiskCacheStrategy.ALL )
-                .into( holder.iv_image );
-*/
+
 
     }
 

@@ -27,7 +27,7 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/iv_search"
             android:fontFamily="@font/montserrat"
-            android:hint="Ex. Cat"
+            android:hint="@string/keyword_hint"
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
 

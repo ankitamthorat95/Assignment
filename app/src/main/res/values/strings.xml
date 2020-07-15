@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AxxessAssignmentApp</string>
+    <string name="keyword_hint">Ex. Cat</string>
+    <string name="no_title">No Title Available</string>
+    <string name="Add_comment">Add Comment</string>
+    <string name="post">Post</string>
 </resources>

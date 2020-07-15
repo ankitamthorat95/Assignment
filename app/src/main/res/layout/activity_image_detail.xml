@@ -40,7 +40,7 @@
                 android:id="@+id/tv_imageName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No Title Available"
+                android:text="@string/no_title"
                 android:textSize="18sp"
                 android:textColor="@color/colorTextWhite"
                 android:layout_toRightOf="@+id/iv_back"
@@ -105,13 +105,13 @@
                     android:drawableLeft="@drawable/ic_blog"
                     android:drawablePadding="10dp"
                     android:background="@android:color/transparent"
-                    android:hint="Add comment"/>
+                    android:hint="@string/Add_comment"/>
 
                 <TextView
                     android:id="@+id/tv_post"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="POST"
+                    android:text="@string/post"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
